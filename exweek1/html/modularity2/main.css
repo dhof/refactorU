@@ -1,0 +1,79 @@
+/* ADD YOUR STYLES HERE */
+
+.horizontal-center {
+	text-align: center;
+}
+
+.horizontal-center img {
+	margin-right: 35px;
+}
+
+.horz-center2 {
+	display: inline-block;
+}
+
+.horz-center2 p,
+ol {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.horz-center2 img, p, ol {
+	margin-right: 35px;
+}
+
+.horz-center2 img {
+	margin-right: 35px;
+	vertical-align: top;
+}
+
+.vert-center {
+	height: 250px;
+	line-height: 250px;
+}
+
+.vert-center div {
+	vertical-align: middle;
+}
+
+.vert-center2 {
+	height: 400px;
+	line-height: 400px;
+}
+
+.vert-center2 div {
+	display: inline-block;
+	line-height: initial;
+	vertical-align: middle;
+}
+
+.horz-list {
+	list-style: none;
+}
+
+.horz-list li {
+	display: inline-block;
+}
+
+.a-buttons {
+	/*display: inline-block;*/
+	/*width: 300px;*/
+}
+
+.a-buttons a {
+	background-color: #ea8189;
+	border-radius: 4px;
+	color: white;
+	text-decoration: none;
+}
+
+.a-buttons div:first {
+	background-color: green;
+	width: 200px;
+}
+
+
+
+
+
+
