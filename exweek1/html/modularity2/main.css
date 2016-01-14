@@ -55,25 +55,140 @@ ol {
 	display: inline-block;
 }
 
-.a-buttons {
+.buttons {
 	/*display: inline-block;*/
 	/*width: 300px;*/
 }
 
-.a-buttons a {
+.buttons a,
+.buttons2 a,
+.buttons2 input {
 	background-color: #ea8189;
 	border-radius: 4px;
+	color: white;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.buttons a:nth-child(1) {
+	font-size: 23px;
+	padding: 20px 55px 20px 55px;
+}
+
+.buttons a:nth-child(2) {
+	padding: 10px 40px 10px 40px;
+}
+
+.buttons a:nth-child(3) {
+	font-size: 12px;
+	padding: 5px 7px 5px 7px;
+}
+.buttons2 a,
+.buttons2 input {
+	border: none;
+	padding: 10px 37px 10px 37px;
+}
+
+.nav {
+	background-color: #ea8189;
+	border-radius: 4px;
+	padding: 10px 40px 10px 40px;
+	text-align: center;
+	width: 100%;
+}
+
+.nav li {
+	display: inline-block;
+	margin-right: 70px;
+}
+
+.nav li:last-child {
+	margin-right: none;
+}
+
+
+.nav a {
 	color: white;
 	text-decoration: none;
 }
 
-.a-buttons div:first {
-	background-color: green;
-	width: 200px;
+.pag {
+
 }
 
+.pag li {
+	display: inline-block;
+	margin-right: 15px;
+}
 
+.pag a {
+	border-bottom: 2px solid #ea8189;
+	color: #ea8189;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 20px;
+	text-align: center;
+	text-decoration: none;
+	width: 20px;
+}
 
+.pag span {
+	border-bottom: 2px solid #cbcbcc;
+	color: #cbcbcc;
+	display: inline-block;
+	text-align: center;
+	width: 20px;
+}
 
+.pag li:nth-child(1) a,
+.pag li:nth-child(9) a {
+	border-bottom: none;
+}
+
+.stream-float {
+	float: left;
+	margin-right: 9px;
+}
+
+.stream-clear {
+	clear: left;
+}
+
+.stream-overflow {
+	overflow: hidden;
+}
+
+.tabs li {
+	border: 2px solid #bcbce4;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	display: inline-block;
+	margin-right: 5px;
+	padding: 5px 8px;
+	position: relative;
+	top: 2px;
+	z-index: 2;
+}
+
+.tabs a {
+	color: blue;
+	font-size: 13px;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.tabs-content {
+	border: 2px solid #bcbce4;
+	border-radius: 5px;
+	font-size: 15px;
+	font-weight: 500;
+	padding: 10px 15px 15px 8px;
+	z-index: 1;
+}
+
+#tabs-active {
+	border-bottom: 2px solid white;
+}
 
 
