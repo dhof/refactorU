@@ -187,7 +187,7 @@ ol {
 	z-index: 1;
 }
 
-#tabs-active {
+.tabs li:hover {
 	border-bottom: 2px solid white;
 }
 
