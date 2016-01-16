@@ -6,37 +6,38 @@
 </head>
 <body>
 	
-	<!-- <div class="container"> -->
+	<div class="container">
 		<div class="header-wrapper">
 			<div class="header">
 				<h2>My Website</h2>
 			</div>
 			<nav class="header-nav">
 				<ul>
-					<li>HOME</li>
-					<li>ALL POSTS</li>
-					<li>ABOUT US</li>
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">ALL POSTS</a></li>
+					<li><a href="#">ABOUT US</a></li>
 				</ul>
 			</nav>
 		</div> <!-- header-wrapper -->
 
 
+		<div class="content-wrapper">
+
 			<div class="blog-nav">
 				<ul>Recent Posts
-					<li>Another Post</li>
-					<li>A Cool Story</li>
-					<li> Useful Tips and Tricks</li>
+					<li><a href="#">Another Post</a></li>
+					<li><a href="#">A Cool Story</a></li>
+					<li><a href="#">Useful Tips and Tricks</a></li>
 				</ul>
 
 				<ul>Categories
-					<li>Web</li>
-					<li>Dev</li>
-					<li>CSS</li>
+					<li><a href="#">Web</a></li>
+					<li><a href="#">Dev</a></li>
+					<li><a href="#">CSS</a></li>
 				</ul>
 			</div> <!-- blog-nav -->
 
 
-		<div class="content-wrapper">
 			<div class="content-article">
 				<div class="article-title">
 					<h3>Article Title</h3>
@@ -81,9 +82,11 @@
 				<h4 class="section-title">Section Title</h4>
 				<p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis commodo risus quis convallis. Nunc dignissim dolor purus, in vehicula dui cursus quis. Integer eu lobortis tortor. Donec pulvinar ex mi. Pellentesque eget orci eros. Maecenas et diam eu enim consectetur sagittis. Praesent scelerisque malesuada lectus in varius. Aenean finibus malesuada urna. Fusce eget massa ut eros imperdiet semper. Nam imperdiet velit eget urna laoreet elementum.</p>
 				<div class="code-example">
-					<p>$('#myElement').click(function() { </br>
-						console.log('Clicked!') </br>
-					});</p>
+					<pre>
+<!-- 						 -->$('#myElement').click(function() {
+<!-- 						  -->  console.log('Clicked!') 
+<!-- 						 -->});
+					</pre>
 				</div>
 
 				<p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis commodo risus quis convallis. Nunc dignissim dolor purus, in vehicula dui cursus quis. Integer eu lobortis tortor. Donec pulvinar ex mi. Pellentesque eget orci eros. Maecenas et diam eu enim consectetur sagittis. Praesent scelerisque malesuada lectus in varius. Aenean finibus malesuada urna. Fusce eget massa ut eros imperdiet semper. Nam imperdiet velit eget urna laoreet elementum.</p>
@@ -93,30 +96,34 @@
 			<div class="content-steps">
 				<h4 class="section-title">Section Title</h4>
 				<p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis commodo risus quis convallis. Nunc dignissim dolor purus, in vehicula dui cursus quis. Integer eu lobortis tortor. Donec pulvinar ex mi. Pellentesque eget orci eros. Maecenas et diam eu enim consectetur sagittis. Praesent scelerisque malesuada lectus in varius. Aenean finibus malesuada urna. Fusce eget massa ut eros imperdiet semper. Nam imperdiet velit eget urna laoreet elementum.</p>
-				
+
+				<div class="center-img">
 					<img src="http://placehold.it/450x100">
-				
+				</div>
 
 				<ol>
-					<li><span>Create HTML:</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis commodo risus quis convallis. Nunc dignissim dolor purus, in vehicula dui cursus quis. Integer eu lobortis tortor. Donec pulvinar ex mi. Pellentesque eget orci eros. Maecenas et diam eu enim consectetur sagittis.</li>
-					<li><span>Make Pretty with CSS:</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis commodo risus quis convallis. Nunc dignissim dolor purus, in vehicula dui cursus quis. Integer eu lobortis tortor. Donec pulvinar ex mi. Pellentesque eget orci eros. Maecenas et diam eu enim consectetur sagittis.</li>
-					<li><span>Profit:</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis commodo risus quis convallis. Nunc dignissim dolor purus, in vehicula dui cursus quis. Integer eu lobortis tortor. Donec pulvinar ex mi. Pellentesque eget orci eros. Maecenas et diam eu enim consectetur sagittis.</li>
+					<li><span>Create HTML: </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis commodo risus quis convallis. Nunc dignissim dolor purus, in vehicula dui cursus quis. Integer eu lobortis tortor. Donec pulvinar ex mi. Pellentesque eget orci eros. Maecenas et diam eu enim consectetur sagittis.</li>
+					<li><span>Make Pretty with CSS: </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis commodo risus quis convallis. Nunc dignissim dolor purus, in vehicula dui cursus quis. Integer eu lobortis tortor. Donec pulvinar ex mi. Pellentesque eget orci eros. Maecenas et diam eu enim consectetur sagittis.</li>
+					<li><span>Profit: </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mattis commodo risus quis convallis. Nunc dignissim dolor purus, in vehicula dui cursus quis. Integer eu lobortis tortor. Donec pulvinar ex mi. Pellentesque eget orci eros. Maecenas et diam eu enim consectetur sagittis.</li>
 				</ol>
 
-				<p class="author">Posted by Author under Web > Dev on January 13, 2014.</p>
+				<p class="author">Posted by <span>Author</span> under <span>Web</span> > <span>Dev</span> on <span>January 13, 2014</span>.</p>
 			</div> <!-- content-steps -->
 
 			<div class="Comments">
 				<h4>Comments</h4>
 				<h5>USER INFO</h5>
 				
-
-				Name <input type="text" name="Email" Placeholder="Email please">
-				Display Name <input type="text" name="Display Name" Placeholder="Name please please">
-				Website <input type="text" name="Website" Placeholder="What site?">
-				<h5>COMMENT</h5>
-				<textarea name="comment" id="comment" cols="30" rows="10" placeholder="please enter a comment"></textarea>
-				<input type="submit" name="submit">
+				<div class="form">
+					<ul>
+						<li>Name <input type="text" name="Email"></li>
+						<li>Display Name <input type="text" name="Display Name"></li>
+						<li>Website <input type="text" name="Website"></li>
+					</ul>
+					<h5>COMMENT</h5>
+					<textarea name="comment" id="comment" cols="40" rows="10" placeholder="please enter a comment"></textarea>
+					<input type="submit" name="submit">
+				</div> <!-- form -->
 			</div> <!-- comments -->
 				
 			<div class="user-posts">
@@ -157,7 +164,7 @@
 				</div>
 			</div> <!-- user-posts -->
 		</div> <!-- content-wrapper -->
-	<!-- </div> --> <!-- container -->
+	</div> <!-- container -->
 		
 
 	
