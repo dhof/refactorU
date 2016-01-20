@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS4.1</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="app.js"></script>
+
+	<style>
+	.pinkImg {
+		background: url("http://i.perezhilton.com/wp-content/uploads/2013/12/pink-billboard-woman-of-the-year__oPt.jpg");
+		background-size: contain;
+		height: 200px;
+		width: 200px
+	}
+	.modal {
+		border: 1px solid grey;
+		height: 100px;
+		margin: auto;
+		padding-top: 30%;
+		position: relative;
+		text-align: center;
+		width: 100px;
+	}
+	.modal button {
+		position: absolute;
+		right: 2px;
+		top: 2px;
+	}
+
+	</style>
+</head>
+<body ng-app="angularApp">
+	<div ng-controller="consoleOutput">
+		<label> Message:
+			<input ng-model="message" type="text"/></label>
+		<br>
+		<br>
+		<button ng-click="$log.log(message)">log</button>
+		<button ng-click="$log.warn(message)">warn</button>
+		<button ng-click="$log.info(message)">info</button>
+		<button ng-click="$log.error(message)">error</button>
+		<button ng-click="$log.debug(message)">debug</button>
+		</br>
+		</br>
+		<div>
+			<button ng-click="showPar=true">There's something below me...</button>
+			<p ng-show="showPar">I'm a paragraph?</p> <br><br>
+			<button ng-click="showUl=true">Pretty sure there's a list somewhere</button>
+			<ul ng-show="showUl">
+				<li>First list item</li>
+				<li>2nd list item</li>
+				<li>3rd list item</li>
+			</ul>
+			<br><br>
+		</div>
+	
+
+	<div>
+		<button ng-click="excited=true">Excited for headers?</button>
+		<h1>LOOKY ME h1<span ng-show="excited">{{excitement}}</span></h1>
+		<h2>I'm an h2<span ng-show="excited">{{excitement}}</span></h2>
+
+		<div ng-mouseover="myStyle={color:'pink'}">
+			<p ng-style="myStyle">Lorem ipsum dolor sit amet.</p>
+			<p ng-style="myStyle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, atque.</p>
+		</div>
+		<div class=pinkImg ng-click="myStyle={}"></div>
+			<p>Not a pink fan? Click ^</p>	
+	</div>
+	
+	<div>
+		<a href="http://www.google.com" ng-hide="hideElement" ng-click="noEscape()">google</a>
+		<br><br>
+	</div>
+</div>
+
+<div ng-controller="modalPop" style="width:200px; height:200px; margin:auto;" >
+	<button ng-click="openModal()" style="width:50px; height:50px; text-align:center;">big button</button>
+
+	<div  ng-show="showModal" class="modal">
+		<button ng-click="cancel()">X</button>
+		<p>Check out my modal, bruh</p>
+		
+	</div>
+	
+
+</div>
+
+
+</body>
+</html>
