@@ -31,15 +31,17 @@
 		
 			
 			<div class="firstDisplay">
-				<p ng-show="showingElement1" ng-click="change1()">Blog o' the rando dude!</p>
-				<input ng-hide="showingElement1" ng-blur="showingElement1=true" type="text" placeholder="Blog o' the rando dude!">
-				
+				<p ng-bind="descript" ng-show="showingElement1" ng-click="change1()"></p>
+
+				<input id="inputNumber1" ng-model="updateDescript" ng-hide="showingElement1" ng-blur="blur1()" type="text" placeholder="Blog o' the rando dude!">
 			</div>
 
 
 			<div class="secondDisplay">
-				<p ng-show="showingElement2" ng-click="change2()">Birthplace: <span>dumpster</span></p>
-				<input ng-hide="showingElement2" ng-blur="showingElement2=true" type="text" placeholder="enter me">
+				<p ng-show="showingElement2" ng-click="change2()">Birthplace: <span ng-bind="bday"></span></p>
+				<input class="inputNumber2" ng-model="updateBday" ng-hide="showingElement2" ng-blur="blur2()" type="text" placeholder="enter me">
+
+				
 			</div>
 		</div> <!-- col60 -->
 	</section>
