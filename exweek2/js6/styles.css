@@ -1,0 +1,32 @@
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	margin: auto;
+	margin-top: 50px;
+	width: 960px;
+}
+
+.col-30 {
+	display: inline-block;
+	width: 35%;
+	vertical-align: top;
+}
+
+.col-70 {
+	display: inline-block;
+	padding-left: 30px;
+	width: 60%;
+	vertical-align: top;
+}
+
+
+.profileImage {
+	border-radius: 50%;
+	width: 300px;
+}
+
+.formBlock input, textarea {
+	width: 100%;
+}
