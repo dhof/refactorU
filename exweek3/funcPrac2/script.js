@@ -91,25 +91,26 @@
 
 
 
-// var unique = function(array) {
-// 	var uniqueStrings = [];
-// 	for(i = 0; i < array.length; i++) {
-// 		if 
-// 	}
-// }
+
+var duplicatesArray = ['a', 'b', 'd', 'c', 'f', 'c']
+var uniqueArray = []
+var objects = {}
 
 
-// var duplicatesArray = ['a', 'b', 'd', 'c', 'f', 'c']
+var unique = function() {
+	for(i = 0; i < duplicatesArray.length; i++) {
+		objects[duplicatesArray[i]] = duplicatesArray[i]; // pushes key: value pair to object
+		// console.log(objects)
+	}
+	
+	for (var key in objects) {
+		uniqueArray.push(key)
+	}
+	return uniqueArray;
+	
+}
 
-// var unique = duplicatesArray.filter(function(element) {
-// 	var uniqueArray = [];
-// 	for(i = 0; i < duplicatesArray.length; i++) {
-		
-// 	}
-// })
-
-
-
+console.log(unique());
 
 
 
