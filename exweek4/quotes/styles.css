@@ -1,0 +1,57 @@
+/*.quoteCreation {
+	background-color: blue;
+}
+
+.quoteOutput {
+	background-color: green;
+}*/
+
+
+
+
+
+*, p {
+	box-sizing: border-box;
+	margin: none;
+}
+
+
+
+.container {
+	margin: auto;
+	max-width: 960px;
+	
+}
+
+form > * {
+	border-radius: 6px;
+}
+
+.quoteCreation {
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.author, .quote {
+	display: block;
+	margin: auto;
+	margin-bottom: 20px;
+	width: 400px;
+}
+
+
+.submit, .remove {
+	width: 100px;
+}
+
+.submit {
+	margin-right: 10px;
+	margin-bottom: 0;
+}
+
+
+.quoteOutput {
+	text-align: center;
+}
+
+.quote

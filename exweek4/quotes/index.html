@@ -3,25 +3,36 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Inspirational Quotes</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<link rel="stylesheet" href="styles.css">
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
 	<script src="script.js"></script>
 </head>
 <body ng-controller="quotesControl">
 
-	<div>
-		<form ng-submit="quoteCreate(scope.author, scope.text)">
-			<input ng-model="scope.author" type="text" placeholder="Please enter author"> </br> </br>
-			<textarea ng-model="scope.text" name="authorText" id="" cols="30" rows="10" placeholder="Please enter the author's quote"></textarea>
-			<input type="submit" value="submit">
-		</form>
-	</div>
-	
-	<div ng-repeat="quote in quotes">
-		<h3>Author: {{quote.author}}</h3>
-		<p>the text: {{quote.text}}</p>
+	<div class="container">
+		<div class="quoteCreation">
 		
+		<h1>Welcome, check out our awesome quotes!</h1>
+
+		<h3>And add your very own!</h3>
+
+		<form>
+			<input ng-model="newQuote.author" type="text" placeholder="Please enter an author" class="author">
+			<textarea ng-model="newQuote.text" name="authorText" id="" cols="30" rows="10" placeholder="Please enter the author's quote" class="quote"></textarea>
+			<input ng-click="submitQuote(); QuoteCreate(newQuote.author, newQuote.text)" type="submit" value="submit" class="submit">
+			<input ng-click="removeLast()" ng-show="removeTruthy" type="submit" value="Remove Last" class="remove">
+		</form>
+		</div>	<!-- quoteCreation -->
 	
-	</div>
+
+	<div class="quoteOutput">
+		<div ng-repeat="quote in quotes track by $index">
+			<p>{{quote.text}}</p>
+			<h3>Written by: {{quote.author}}</h3>
+		</div>
+	</div> 
+	
 	
 </body>
 </html>
