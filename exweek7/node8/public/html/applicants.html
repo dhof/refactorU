@@ -5,11 +5,12 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.js"></script>
   </head>
   <body ng-controller="applicantController">
 	  
     <div class="container">
-      <p ng-show="applicantName" class="removed">{{applicantName}} has been deleted</p>
+      <p ng-show="applicantRemoved" class="removed">{{applicantRemoved}} has been deleted</p>
       <h1>Applicants</h1>
       <ul id="applications" class="list-unstyled">
         <li ng-repeat="applicant in applicantData">

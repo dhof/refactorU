@@ -9,3 +9,7 @@ a {
 .removed {
 	color: red;
 }
+
+.home-link {
+	float: right;
+}

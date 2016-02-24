@@ -45,7 +45,13 @@ app.get('/', function(req, res) {
 // creates an applicant
 app.post('/api/applicants', function(req, res){
 	// console.log(req.body);
-	var applicant = new Application(req.body)
+	var applicant = new Application({
+		name: req.body.name,
+		bio: req.body.bio,
+		skills: req.body.skills.split(', '),
+		years: +req.body.years,
+		why: req.body.why,
+	})
 	applicant.save(function(err, savedApplicant) {
 		console.log("applicant error " + err)
 		console.log("applicant save " + savedApplicant)
@@ -53,7 +59,7 @@ app.post('/api/applicants', function(req, res){
 	})
 });
 
-// 
+// grab all applicant data from DB and send back to angular controller
 app.get('/api/applicants', function(req, res) {
 	Application.find({}, function(err, docs) {
 		res.send(docs)
@@ -67,14 +73,21 @@ app.get('/applicants', function(req, res) {
 })
 
 app.post('/api/applicants/remove', function(req, res) {
-// console.log("req body ", req.body.appId)
 	Application.findOne({_id : req.body.appId}, function(err, foundApplicant) {
 		Application.remove({_id : req.body.appId}, function(err, removeApplicant) {
-			res.redirect('/applicants')
+			res.send(foundApplicant)
 		})
 	})
 })
 
+
+app.get('/applicants/:userid', function(req, res) {
+	console.log("hitting viewer page on express")
+	// res.sendFile('html/profile.html', {root : './public'});
+	Application.find({_id: req.params.userid}, function(err, userData) {
+		res.send(userData);
+	})
+})
 
 // Creating Server and Listening for Connections \\
 var port = 3000
