@@ -6,15 +6,16 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.js"></script>
+     <base href="/">
   </head>
   <body ng-controller="applicantController">
 	  
     <div class="container">
-      <p ng-show="applicantRemoved" class="removed">{{applicantRemoved}} has been deleted</p>
+      <p ng-show="applicantRemoved" class="removed">{{applicantRemoved}} has been removed</p>
       <h1>Applicants</h1>
       <ul id="applications" class="list-unstyled">
         <li ng-repeat="applicant in applicantData">
-          {{applicant.name}} <button ng-click="removeApplicant(applicant._id)">No job for you!</button>
+          <a href="/applicants/{{applicant._id}}">{{applicant.name}}</a> <button ng-click="removeApplicant(applicant._id)">No job for you!</button>
         </li>
       </ul>
     </div>

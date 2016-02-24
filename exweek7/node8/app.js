@@ -60,10 +60,13 @@ app.post('/api/applicants', function(req, res){
 });
 
 // grab all applicant data from DB and send back to angular controller
-app.get('/api/applicants', function(req, res) {
-	Application.find({}, function(err, docs) {
-		res.send(docs)
-	})
+
+
+app.get('/api/applicants/', function(req, res) {
+		console.log("no param")
+		Application.find({}, function(err, docs) {
+			res.send(docs)
+		})
 })
 
 
@@ -80,13 +83,19 @@ app.post('/api/applicants/remove', function(req, res) {
 	})
 })
 
-
+// individual applicant profile routes
 app.get('/applicants/:userid', function(req, res) {
-	console.log("hitting viewer page on express")
-	// res.sendFile('html/profile.html', {root : './public'});
-	Application.find({_id: req.params.userid}, function(err, userData) {
-		res.send(userData);
-	})
+	console.log("express viewer page")
+	console.log(req.params.userid)
+	res.sendFile('html/profile.html', {root : './public'});
+})
+
+app.get('/api/applicants/:userid', function(req, res) {
+		console.log("param", req.params.userid)
+		Application.findOne({_id : req.params.userid}, function(err, userData) {
+			console.log(userData)
+			res.send(userData);
+		})
 })
 
 // Creating Server and Listening for Connections \\

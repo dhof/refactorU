@@ -1,4 +1,7 @@
-angular.module('JobApp', ['ngRoute'])
+angular.module('JobApp', [], function($locationProvider){
+	$locationProvider.html5Mode(true);
+});
+
 
 angular.module('JobApp')
 	.controller('homeController', ['$scope', '$http', function($scope, $http){
@@ -36,7 +39,7 @@ angular.module('JobApp')
 					$scope.applicantRemoved = returnedData.data.name;
 					$http.get('/api/applicants')
 						.then(function(returnData) {
-						$scope.applicantData = returnData.data
+						$scope.applicantData = returnData
 				})
 			})
 		}
@@ -45,16 +48,13 @@ angular.module('JobApp')
 
 
 angular.module('JobApp')
-	.controller('profileController', ['$scope', '$http', '$route', '$routeParams', '$location', function($scope, $http, $route, $routeParams, $location) {
+	.controller('profileController', ['$scope', '$http', '$location', function($scope, $http, $location) {
 
+		var userId = $location.path().split('/')[2]
 
-		
-		// $scope.showme = console.log($route.params)
-		$http.get('/applicants/:userid')
+		$http.get('/api/applicants/'+userId)
 			.then(function(returnedData) {
-				window.location = '/applicants'
-				$scope.params = $route.params
-				$scope.showme = console.log($routeParams = {user:'56cd069fe6f8c6c82e82344a'})
+				$scope.userData = returnedData.data
 			})
 
 	}]);

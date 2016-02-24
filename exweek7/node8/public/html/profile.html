@@ -6,20 +6,20 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.js"></script>
+    <base href="/">
   </head>
 <body ng-controller="profileController">
 
 	<div><a class="home-link" href="/">Home</a></div>
 	
 	<div>
-		{{params}}
 		<h2>Applicant name:  {{userData.name}}</h2>
 		<p>Description:  {{userData.bio}}</p>
 		<ul>Skills:
 			<li ng-repeat="skill in userData.skills">{{skill}}</li>
 		</ul>
-		<p>Years in industry:  {{years}}</p>
-		<p>Why work here:  {{why}}</p>
+		<p>Years in industry:  {{userData.years}}</p>
+		<p>Why work here:  {{userData.why}}</p>
 	</div>
 
 	<script src="/javascripts/main.js"></script>
