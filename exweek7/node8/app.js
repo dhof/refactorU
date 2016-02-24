@@ -53,18 +53,14 @@ app.post('/api/applicants', function(req, res){
 		why: req.body.why,
 	})
 	applicant.save(function(err, savedApplicant) {
-		console.log("applicant error " + err)
-		console.log("applicant save " + savedApplicant)
 		res.send(savedApplicant);
 	})
 });
 
 // grab all applicant data from DB and send back to angular controller
-
-
 app.get('/api/applicants/', function(req, res) {
-		console.log("no param")
 		Application.find({}, function(err, docs) {
+			// console.log(docs)
 			res.send(docs)
 		})
 })
@@ -85,15 +81,12 @@ app.post('/api/applicants/remove', function(req, res) {
 
 // individual applicant profile routes
 app.get('/applicants/:userid', function(req, res) {
-	console.log("express viewer page")
-	console.log(req.params.userid)
 	res.sendFile('html/profile.html', {root : './public'});
 })
 
 app.get('/api/applicants/:userid', function(req, res) {
 		console.log("param", req.params.userid)
 		Application.findOne({_id : req.params.userid}, function(err, userData) {
-			console.log(userData)
 			res.send(userData);
 		})
 })

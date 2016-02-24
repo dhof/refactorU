@@ -27,7 +27,6 @@ angular.module('JobApp')
 		// COULD SET this to a variable and then remove the applicants from the db and the variable. Then another $http.get wouldn't be necessary
 		$http.get('/api/applicants')
 			.then(function(returnData) {
-				console.log("getted data ", returnData.data)
 				$scope.applicantData = returnData.data
 			})
 
@@ -39,7 +38,7 @@ angular.module('JobApp')
 					$scope.applicantRemoved = returnedData.data.name;
 					$http.get('/api/applicants')
 						.then(function(returnData) {
-						$scope.applicantData = returnData
+						$scope.applicantData = returnData.data
 				})
 			})
 		}
