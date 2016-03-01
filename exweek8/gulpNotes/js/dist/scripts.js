@@ -1,0 +1,1 @@
+var hello=function(){console.log("greetings")},x=2,updatedNum=function(n){return n*x};

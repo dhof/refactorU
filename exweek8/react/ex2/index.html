@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React tut Scotch</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="myDiv"></div>
+    <script type="text/babel">
+      
+      // ReactDOM.render( 
+      //   <h1>Hello, World!</h1>,
+      //   document.getElementById('myDiv')
+      // );
+
+
+     var MyComponent = React.createClass({
+        render: function(){
+            return ([
+                <button className='showCountriesBtn'>Show Countries</button>,
+                <h1>Hello, world!</h1>
+                
+            ]);
+        }
+    });
+
+
+     ReactDOM.render(
+    <MyComponent/>,
+    document.getElementById('myDiv')
+);
+
+    
+//     var MyComponent = React.createClass({
+//     render: function(){
+//         return (
+//             <h1>Hello, {this.props.name}!</h1>
+//         );
+//     }
+// });
+
+// ReactDOM.render(<MyComponent name="Handsome" />, document.getElementById('myDiv'));
+    </script>
+  </body>
+</html>
