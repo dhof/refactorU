@@ -30,16 +30,12 @@
         },
         render: function() {
           return (<ul>
-              
-                 { this.props.data.map(function(item) {
-                return <li>I have {not(item)} visited {item.name} <button onClick={self.handleClick.bind(null,item)}>I have travelled to {item.name}</button></li>
-            })
-            }
-        </ul>)
+              {
+                this.props.data
+                ? this.props.
+              })
         }
-    });
-    ReactDOM.render(<List data />, document.getElementById('countries'));
-
+    })
 
 
     // var ClickToShowCountries = React.createClass({
@@ -55,7 +51,7 @@
 
     var ClickToShowCountries = React.createClass({
         handleClick: function() {
-          $.get('/api/countries', function (response) {
+          $.get('/countries', function (response) {
             countries = response
             // ReactDOM.render(<List data={countries} />,
             //   document.getElementById('countries'));
